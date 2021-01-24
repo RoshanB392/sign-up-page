@@ -22,43 +22,42 @@
         <header>
             <?php include("./assets/html/header.html");?>
         </header>
+
         <div class="col-sm-6 col-sm-offset-3">
 
             <h1>Create your account</h1>
-        
-            <!-- OUR FORM -->
-            <form action="process.php" method="POST">
-        
-                <!-- USERNAME -->
-                <div id="name-group" class="form-group">
-                    <label for="username">User Name</label>
-                    <input type="text" class="form-control" name="username" placeholder="User Name">
-                    <!-- errors -->
-                </div>
-        
-                <!-- EMAIL -->
-                <div id="email-group" class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" name="email" placeholder="name@gmail.com" required>
-                    <!-- errors -->
-                </div>
-        
-                <!-- PASSWORD -->
-                <div id="password-group" class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Password" required>
-                    <!-- errors -->
-                </div>
-        
-                <button type="submit" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
-        
-            </form>
-        
+            <div>        
+                <!-- SIGN UP FORM -->
+                <form action="process.php" method="POST">
+            
+                    <!-- USERNAME -->
+                    <div id="name-group" class="form-group">
+                        <label for="username">User Name</label>
+                        <input type="text" class="form-control" name="username" placeholder="User Name">
+                        <!-- errors -->
+                    </div>
+            
+                    <!-- EMAIL -->
+                    <div id="email-group" class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" placeholder="name@gmail.com" required>
+                        <!-- errors -->
+                    </div>
+            
+                    <!-- PASSWORD -->
+                    <div id="password-group" class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        <!-- errors -->
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
+
+                </form>
+            </div>
         </div>
 
-        <footer>
-
-        </footer>
+        <footer></footer>
     </body>
-
 </html>
