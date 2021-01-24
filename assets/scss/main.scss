@@ -1,0 +1,7 @@
+@use 'base';
+$white: #fff;
+
+.inverse{
+    background-color: $black;
+    color: $white;
+}
