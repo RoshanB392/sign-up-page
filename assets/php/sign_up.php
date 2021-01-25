@@ -1,15 +1,16 @@
 <?php
-    // include_once('./assets/php/db_connect.php');
-    
+    include_once('./connection.php');
+
     if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['password'])){
 
-            $first_name = $_POST['fisrtname'];
+            $first_name = $_POST['firstname'];
             $last_name = $_POST['lastname'];
             $email = $_POST['email'];
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);	
             
             $checkEmail = mysqli_query($conn, "SELECT email FROM user WHERE email = '$email'");
-            if($checkEmail > 0){
+
+            if(mysqli_num_rows($checkEmail)){
                 echo json_encode(['status' => 'error', 'message' => 'Email not available']);
             } else {
                 $sql = "INSERT INTO `user`(`first-name`, `last-name`, `email`, `password`) VALUES ('$first_name', '$last_name', '$email', '$password')";
@@ -23,6 +24,4 @@
             }
         }
 
-
-mysqli_close($conn);
 ?>

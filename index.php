@@ -23,37 +23,39 @@
             <h1 class="text-center border-bottom pb-3">Create your account</h1>
             <div>        
                 <!-- SIGN UP FORM -->
-                <form id="sign_up_form" class="row g-3">
+                <!-- <form id="sign_up_form" method="post" action="./assets/php/sign_up.php" class="row g-3"> -->
+                <form id="sign_up_form" method="post" class="row g-3">
             
                     <!-- FIRST NAME -->
                     <div id="firstname-group" class="col-md-6">
                         <label for="firstname" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                        <input type="text" class="form-control firstname" id="firstname" name="firstname" placeholder="First Name">
                         <!-- errors -->
-                        <div class="invalid-feedback" style="font-size:16px;">First Name is required</div>
+                        <div class="invalid-feedback" style="font-size:16px;">Please enter First Name.</div>
                     </div>
+
                     <!-- LAST NAME -->
                     <div id="lastname-group" class="col-md-6">
                         <label for="lastname" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                        <input type="text" class="form-control lastname" id="lastname"name="lastname" placeholder="Last Name">
                         <!-- errors -->
-                        <div class="invalid-feedback" style="font-size:16px;">Last Name is required</div>
+                        <div class="invalid-feedback" style="font-size:16px;">Please enter Last Name.</div>
                     </div>
 
                     <!-- EMAIL -->
                     <div id="email-group" class="col-12">
                         <label for="email" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="email" placeholder="your-name@gmail.com" required>
+                        <input type="email" class="form-control email" id="email" name="email" placeholder="your-name@gmail.com" required>
                         <!-- errors -->
-                        <div class="invalid-feedback emailError" style="font-size:16px;">First Name is required</div>
+                        <div class="invalid-feedback emailError" style="font-size:16px;">Please enter Email.</div>
                     </div>
             
                     <!-- PASSWORD -->
                     <div id="password-group" class="col-12">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control password" id="password" name="password" placeholder="Password" required>
                         <!-- errors -->
-                        <div class="invalid-feedback passwordError" style="font-size:16px;">First Name is required</div>
+                        <div class="invalid-feedback passwordError" style="font-size:16px;">Please enter Password</div>
                     </div>
 
                     <!-- SUBMIT BUTTON -->
@@ -74,6 +76,8 @@
         
         <!-- Javascript -->
         <script src="assets/js/sign_up_form.js"></script>
+        
+        <script src="assets/js/main.js"></script>
 
     </body>
 </html>

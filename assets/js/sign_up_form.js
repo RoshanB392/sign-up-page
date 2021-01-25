@@ -1,17 +1,18 @@
 $(document).ready( function() {
 
     // process the form
-    $('#sign_up_form').submit(function (event) {
+    $('#sign_up_form').click(function (event) {
 
         
-        // // Stop form from submitting normally
-        // event.preventDefault();
+        // Stop form from submitting normally
+        event.preventDefault();
 
         const firstname = $('#firstname').val();
         const lastname = $('#lastname').val();
         const email = $('#email').val();
         const password = $('#password').val();
     
+        // form validation
         if(firstname.length == ""){
             $(".firstname").addClass("is-invalid");
         } else {
@@ -58,7 +59,7 @@ $(document).ready( function() {
                         $(".email").addClass("is-invalid");
                         $(".emailError").html(feedback.message);
                     } else if(feedback.status === "success"){
-                        window.location = "./assets/html/signin.html";
+                        window.location.pathname = '../php/signin.php';
                     }
                 }
             })
@@ -70,8 +71,7 @@ $(document).ready( function() {
     
     // User login
 
-
-        $("#btn-signin").sumbit(function(){
+        $("#btn-signin").click(function(){
             
             const email = $("#email").val();
             const password = $("#password").val();
@@ -96,7 +96,7 @@ $(document).ready( function() {
                     dataType : 'json',
                     success : function(feedback){
                         if(feedback.status === "success"){
-                            window.location = "./assets/html/user_profile.php";
+                            window.location.pathname = "../php/user_profile.php";
                         } else if(feedback.status === "passwordError"){
                             $(".password").addClass("is-invalid");
                             $(".passwordError").html(feedback.message);

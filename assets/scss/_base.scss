@@ -1,7 +1,9 @@
 $font-stack: 'Courier New', Courier, monospace;
 $black: #000;
+$gray: #6c757d;
 
 body{
     font-family: $font-stack;
+    background-color: $gray;
     color: $black;
 }
