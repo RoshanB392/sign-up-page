@@ -1,5 +1,5 @@
 <?php
-    include_once('./connection.php');
+    include_once('connection.php');
 
     if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['password'])){
 
@@ -23,5 +23,5 @@
                 }		
             }
         }
-
+mysqli_close($conn);
 ?>

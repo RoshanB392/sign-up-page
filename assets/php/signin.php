@@ -23,7 +23,7 @@
             <h2 class="text-center border-bottom pb-3">Sign in to Portal</h2>
             
             <div>
-                <form class="form" method="post" action="/" class="row g-3">
+                <form class="form" method="POST" action="/" class="row g-3">
                     <div class="col-12">
                             <label for="Email" class="form-label">Email address</label>
                             <input type="email" class="form-control email" id="email" name="email" placeholder="Email address" required>
@@ -56,7 +56,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         
         <!-- Javascript -->
-        <script src="../js/sign_up_form.js"></script>
+        <script src="../js/sign_in_form.js"></script>
         <script src="../js/main.js"></script>
 
     </body>

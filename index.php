@@ -24,12 +24,12 @@
             <div>        
                 <!-- SIGN UP FORM -->
                 <!-- <form id="sign_up_form" method="post" action="./assets/php/sign_up.php" class="row g-3"> -->
-                <form id="sign_up_form" method="post" class="row g-3">
+                <form id="sign_up_form" method="POST" class="row g-3">
             
                     <!-- FIRST NAME -->
                     <div id="firstname-group" class="col-md-6">
                         <label for="firstname" class="form-label">First Name</label>
-                        <input type="text" class="form-control firstname" id="firstname" name="firstname" placeholder="First Name">
+                        <input type="text" class="form-control firstname" id="firstname" name="firstname" placeholder="First Name" required>
                         <!-- errors -->
                         <div class="invalid-feedback" style="font-size:16px;">Please enter First Name.</div>
                     </div>
@@ -37,7 +37,7 @@
                     <!-- LAST NAME -->
                     <div id="lastname-group" class="col-md-6">
                         <label for="lastname" class="form-label">Last Name</label>
-                        <input type="text" class="form-control lastname" id="lastname"name="lastname" placeholder="Last Name">
+                        <input type="text" class="form-control lastname" id="lastname"name="lastname" placeholder="Last Name" required>
                         <!-- errors -->
                         <div class="invalid-feedback" style="font-size:16px;">Please enter Last Name.</div>
                     </div>
@@ -60,7 +60,7 @@
 
                     <!-- SUBMIT BUTTON -->
                     <div class="d-grid col-8 mx-auto">
-                        <button type="submit" class="btn btn-outline-primary btn-block" name="btn-signup">Sign Up<span class="fa fa-arrow-right"></span></button>
+                        <button type="submit" class="btn btn-outline-primary btn-block" name="btn-signup" id="btn-signup">Sign Up<span class="fa fa-arrow-right"></span></button>
                     </div>
                 </form>
             </div>
