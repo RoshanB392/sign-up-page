@@ -1,6 +1,8 @@
 
 .container {
     width: auto;
+    position: absolute;
     max-width: 680px;
     padding: 0 15px;
+    overflow: hidden;
 }
