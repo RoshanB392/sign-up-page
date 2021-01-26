@@ -12,7 +12,7 @@
         $dob = $_POST['dob'];
         $phone = $_POST['mobileno'];	
         
-        if(isset($_POST['password']){
+        if(isset($_POST['password'])){
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);	
             $sql = "UPDATE `user` SET `first-name`='$first_name', `last-name`=$last_name, `email`='$email', `profession`='$profession', `bio`='$bio', `dob`='$dob', `phone`='$phone', `password`='$password' WHERE id='$id'";
         } else {

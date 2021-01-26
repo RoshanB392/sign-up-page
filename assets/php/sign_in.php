@@ -10,7 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         
         <!--  Custom Style CSS  -->
-        <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
+        <link rel="stylesheet" href="../css/main.css">
 
     </head>
     <body>
@@ -18,7 +18,7 @@
             <?php include('../html/header.html'); ?>
         </header>
 
-        <div class="col-sm-3 border border-1 p-3 mx-auto">
+        <div class="col-sm-3 p-3 mt-5 mx-auto shadow-lg bg-white rounded">
 
             <h2 class="text-center border-bottom pb-3">Sign in to Portal</h2>
             
@@ -43,7 +43,7 @@
                 </form>
             </div>
 
-            <div class="col-sm-3 border border-1 text-center p-3 mx-auto">
+            <div class="col-sm-3 text-center p-3 mx-auto shadow-sm bg-white">
                 New to Portal ? <a href="../../index.php"><b>Create an Account.</b></a>
             </div>
 

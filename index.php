@@ -10,7 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         
         <!--  Custom Style CSS  -->
-        <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
+        <link rel="stylesheet" href="assets/css/main.css">
 
     </head>
     <body>
@@ -18,7 +18,7 @@
             <?php include("./assets/html/header.html");?>
         </header>
 
-        <div class="col-sm-4 border border-1 p-3 mx-auto">
+        <div class="col-sm-4 shadow-lg p-3 mt-5 mx-auto  bg-white rounded">
 
             <h1 class="text-center border-bottom pb-3">Create your account</h1>
             <div>        

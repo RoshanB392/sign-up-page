@@ -1,9 +1,10 @@
 
 .container {
-    width: auto;
+    background-color: lightgrey;
+    width: 100%;
+    min-height: 60px;
+    left: 0;
+    bottom: 0;
     position: absolute;
-    float: bottom;
-    max-width: 680px;
-    padding: 0 15px;
-    overflow: hidden;
+    padding: 30 15px;
 }

@@ -38,7 +38,7 @@ if(!isset($_SESSION['id'])){
             <?php include("../html/header.html");?>
         </header>
 
-        <div class="col-sm-4 border border-1 p-3 mx-auto">
+        <div class="col-lg-6 p-3 mt-5 mx-auto shadow-lg bg-white rounded">
 
             <h1 class="text-center border-bottom pb-3">Profile Edit</h1>
             <div>        
@@ -85,8 +85,7 @@ if(!isset($_SESSION['id'])){
                     <!-- BIO DATA-->
                     <div id="bio-group" class="col-12">
                         <label for="bio" class="form-label">Your Bio</label>
-                        <textarea class="form-control" id="bio" name="bio" value="<?php echo($row['bio']);?>" placeholder="Your detail description"></textarea>
-                        
+                        <textarea class="form-control" id="bio" name="bio" placeholder="Your detail description"><?php echo($row['bio']);?></textarea>
                     </div>
                     
                     <!-- DATE OF BIRTH -->

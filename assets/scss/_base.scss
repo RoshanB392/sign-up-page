@@ -1,9 +1,9 @@
-$font-stack: 'Courier New', Courier, monospace;
+$font-stack: 'Source Code Pro', monospace;
 $black: #000;
-$gray: #6c757d;
+$light-gray: #f0f0f0;
 
 body{
     font-family: $font-stack;
-    background-color: $gray;
+    background-color: $light-gray;
     color: $black;
 }
