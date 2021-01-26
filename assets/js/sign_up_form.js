@@ -50,14 +50,14 @@ $(document).ready( function() {
             // process the form
             $.ajax({
                 type: 'POST',
-                url: '../php/sign_up.php',
+                url: 'assets/php/sign_up.php',
                 data: formData,
                 dataType: 'json',               
                 encode: true
             })
             .done(function(feedback){
                 if(feedback.status === "success"){    
-                    window.location = '../php/sign_in.php';
+                    window.location = 'assets/php/sign_in.php';
                 }
             })
             .fail(function(feedback){

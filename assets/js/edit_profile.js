@@ -1,12 +1,18 @@
 $(document).ready( function() {
 
-    // process the form
-    $('#btn-save-changes').click(function (event) {
-
+    $('#btn-edit-profile').click(function (event){
         
         // Stop form from submitting normally
         event.preventDefault();
 
+        window.location = "../php/user_edit.php";
+    })
+
+    $('#btn-update-profile').click(function (event){
+        
+        // Stop form from submitting normally
+        event.preventDefault();
+        
         const firstname = $('#firstname').val();
         const lastname = $('#lastname').val();
         const email = $('#email').val();
@@ -35,12 +41,6 @@ $(document).ready( function() {
             $(".email").removeClass("is-invalid");
         }
 
-        if(password.length == ""){
-            $(".password").addClass("is-invalid");
-        } else {
-            $(".password").removeClass("is-invalid");
-        }
-        
 
         // get the form data
         var formData = {
@@ -53,26 +53,24 @@ $(document).ready( function() {
             'dob' : dob,
             'phone' : mobileno
         };
+    
 
-        if(formData['firstname'] != '' || formData['lastname'] != '' || formData['email'] != '' || formData['password'] != '' ) {
+    if(formData['firstname'] != '' || formData['lastname'] != '' || formData['email'] != '') {
         
-            // process the form
-            $.ajax({
-                type: 'POST',
-                url: '../php/edit.php',
-                data: formData,
-                dataType: 'json',               
-                encode: true
-            })
-            .done(function(feedback){
-                if(feedback.status === "success"){    
-                    window.location = '../php/user_profile.php';
-                }
-            })
-        }
-
-    })
+        // process the form
+        $.ajax({
+            type: 'POST',
+            url: 'update_profile.php',
+            data: formData,
+            dataType: 'json',               
+            encode: true
+        })
+        .done(function(feedback){
+            if(feedback.status === "success"){    
+                window.location = '../php/user_profile.php';
+            }
+        });
+    }
 
 })
-
-
+});

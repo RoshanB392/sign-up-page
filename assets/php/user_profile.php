@@ -89,13 +89,11 @@ if(!isset($_SESSION['id'])){
                         <input type="password" class="form-control" name="password" placeholder="Password" disabled>
                         <!-- errors -->
                     </div>
-
+                    
                     <!-- SUBMIT BUTTON -->
-                    <a href="./user_edit.php?id=<?php echo($_SESSION['id'])?>">
-                        <div class="d-grid col-6 mx-auto">
-                            <button type="submit" class="btn btn-outline-info btn-block">Edit Profile<span class="fa fa-arrow-right"></span></button>
-                        </div>
-                    </a>
+                    <div class="d-grid col-6 mx-auto">
+                        <button type="submit" class="btn btn-outline-info btn-block" id="btn-edit-profile">Edit Profile<span class="fa fa-arrow-right"></span></button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -108,7 +106,7 @@ if(!isset($_SESSION['id'])){
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         
         <!-- Javascript -->
-        <script src="../js/sign_in_form.js"></script>
+        <script src="../js/edit_profile.js"></script>
         <script src="../js/main.js"></script>
     </body>
 </html>

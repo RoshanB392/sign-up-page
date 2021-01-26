@@ -31,7 +31,7 @@ $(document).ready( function() {
             
             $.ajax({
                 type : 'POST',
-                url  : '../php/user_login.php',
+                url  : 'user_login.php',
                 data : formData,
                 dataType : 'json',
                 encode: true
@@ -39,7 +39,7 @@ $(document).ready( function() {
             .done(function(feedback) {
                 console.log(feedback);
                 if(feedback.status === "success"){    
-                    window.location = '../php/user_profile.php';
+                    window.location = 'user_profile.php';
                 }
             })
             .fail(function(feedback) {
