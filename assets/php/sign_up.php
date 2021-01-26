@@ -10,7 +10,7 @@
             
             $checkEmail = mysqli_query($conn, "SELECT email FROM user WHERE email = '$email'");
 
-            if(mysqli_num_rows($checkEmail)){
+            if(mysqli_num_rows($checkEmail) > 0){
                 echo json_encode(['status' => 'error', 'message' => 'Email not available']);
             } else {
                 $sql = "INSERT INTO `user`(`first-name`, `last-name`, `email`, `password`) VALUES ('$first_name', '$last_name', '$email', '$password')";
@@ -23,5 +23,7 @@
                 }		
             }
         }
-mysqli_close($conn);
+
+// mysqli_close($conn);
+
 ?>

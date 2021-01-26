@@ -6,22 +6,22 @@
             $email = $_POST['email'];
             $password = $_POST['password'];	
             
-            $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
+            $sql = "SELECT * FROM user WHERE email = '$email'";
+            $result = mysqli_query($conn, $sql);
 
-            if(mysqli_num_rows($result) > 0){
-                $db_password = $query['password'];
-            }
-                $row = mysqli_fetch_row($result);
+            $row = mysqli_fetch_row($result);
+            $db_password = $row['password'];
                 
             if(password_verify($password, $db_password)){
-                $_SESSION['id'] = $id;
-                $_SESSION['firstname'] = $row['firstname'];
-                $_SESSION['lastname'] = $row['lastname'];
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['firstname'] = $row['first-name'];
+                $_SESSION['lastname'] = $row['last-name'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['dob'] = $row['dob'];
                 $_SESSION['phone'] = $row['phone'];
                 $_SESSION['profession'] = $row['profession'];
                 $_SESSION['bio'] = $row['bio'];
+                
                 echo json_encode(['status' => 'success']);
             } else {
                 echo json_encode(['status' => 'passwordError', 'message' => 'Your Password is incorrect']);

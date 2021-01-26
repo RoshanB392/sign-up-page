@@ -14,7 +14,7 @@
         echo("Connection Failed: " . mysqli_connect_error());
         exit();
     } else {
-        echo("Connected");
+        // echo("Connected");
     }
 
 ?>

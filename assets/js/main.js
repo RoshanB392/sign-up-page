@@ -17,6 +17,6 @@
 //   }                        
 // });
 
-function Redirect(url) {
-    window.location = url;
-}
+// function Redirect(url) {
+//     window.location = url;
+// }

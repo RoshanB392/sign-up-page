@@ -46,24 +46,28 @@ $(document).ready( function() {
         };
 
         if(formData['firstname'] != '' || formData['lastname'] != '' || formData['email'] != '' || formData['password'] != '' ) {
-
+        
             // process the form
             $.ajax({
                 type: 'POST',
                 url: './assets/php/sign_up.php',
                 data: formData,
-                dataType: 'json',
-                encode: true,
-                success : function(feedback){
-                    if(feedback.status === "error"){
-                        $(".email").addClass("is-invalid");
-                        $(".emailError").html(feedback.message);
-                    } else if(feedback.status === "success"){
-                        window.location = './assets/php/signin.php';
-                    }
+                dataType: 'json',               
+                encode: true
+            })
+            .done(function(feedback){
+                if(feedback.status === "success"){    
+                    window.location = './assets/php/sign_in.php';
+                }
+            })
+            .fail(function(feedback){
+                if(feedback.status === "error"){
+                    $(".email").addClass("is-invalid");
+                    $(".emailError").html(feedback.message);
                 }
             })
         }
+
     })
 
 })
