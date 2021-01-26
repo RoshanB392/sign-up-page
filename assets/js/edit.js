@@ -69,11 +69,6 @@ $(document).ready( function() {
                     window.location = '../php/user_profile.php';
                 }
             })
-            .fail(function(feedback){
-                if(feedback.status === "error"){
-                    window.location = '../php/user_edit.php';
-                }
-            })
         }
 
     })

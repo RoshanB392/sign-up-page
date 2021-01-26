@@ -69,12 +69,6 @@ if(!isset($_SESSION['id'])){
                         <!-- errors -->
                     </div>
                     
-                    <!-- AGE -->
-                    <div id="age-group" class="col-12">
-                        <label for="age" class="form-label">Age</label>
-                        <input type="text" class="form-control" id="age" name="age" placeholder="--" disabled>
-                        <!-- errors -->
-                    </div>
                     <!-- DATE OF BIRTH -->
                     <div id="dob-group" class="col-12">
                         <label for="dob" class="form-label">Date Of Birth</label>
