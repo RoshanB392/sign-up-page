@@ -76,7 +76,6 @@
         
         <!-- Javascript -->
         <script src="assets/js/sign_up_form.js"></script>
-        
         <script src="assets/js/main.js"></script>
 
     </body>

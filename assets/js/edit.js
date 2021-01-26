@@ -1,7 +1,7 @@
 $(document).ready( function() {
 
     // process the form
-    $('#btn-signup').click(function (event) {
+    $('#btn-save-changes').click(function (event) {
 
         
         // Stop form from submitting normally
@@ -11,6 +11,10 @@ $(document).ready( function() {
         const lastname = $('#lastname').val();
         const email = $('#email').val();
         const password = $('#password').val();
+        const profession = $('#profession').val();
+        const bio = $('#bio').val();
+        const dob = $('#dob').val();
+        const phone = $('#mobileno').val();
     
         // form validation
         if(firstname.length == ""){
@@ -18,7 +22,7 @@ $(document).ready( function() {
         } else {
             $(".firstname").removeClass("is-invalid");
         }
-        
+
         if(lastname.length == ""){
             $(".lastname").addClass("is-invalid");
         } else {
@@ -36,13 +40,18 @@ $(document).ready( function() {
         } else {
             $(".password").removeClass("is-invalid");
         }
+        
 
         // get the form data
         var formData = {
             'firstname': firstname,
             'lastname': lastname,
             'email': email,
-            'password': password
+            'password': password,
+            'profession' : profession,
+            'bio' : bio,
+            'dob' : dob,
+            'phone' : mobileno
         };
 
         if(formData['firstname'] != '' || formData['lastname'] != '' || formData['email'] != '' || formData['password'] != '' ) {
@@ -50,20 +59,19 @@ $(document).ready( function() {
             // process the form
             $.ajax({
                 type: 'POST',
-                url: '../php/sign_up.php',
+                url: '../php/edit.php',
                 data: formData,
                 dataType: 'json',               
                 encode: true
             })
             .done(function(feedback){
                 if(feedback.status === "success"){    
-                    window.location = '../php/sign_in.php';
+                    window.location = '../php/user_profile.php';
                 }
             })
             .fail(function(feedback){
                 if(feedback.status === "error"){
-                    $(".email").addClass("is-invalid");
-                    $(".emailError").html(feedback.message);
+                    window.location = '../php/user_edit.php';
                 }
             })
         }

@@ -9,8 +9,8 @@
             $sql = "SELECT * FROM user WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
 
-            $row = mysqli_fetch_row($result);
-            $db_password = $row['password'];
+            $row = mysqli_fetch_array($result);
+            $db_password = $row["password"];
                 
             if(password_verify($password, $db_password)){
                 $_SESSION['id'] = $row['id'];

@@ -4,6 +4,6 @@ session_start();
 
 session_destroy();
 
-header("location: signin.php");
+header("location: sign_in.php");
 
 ?>

@@ -1,7 +1,11 @@
 $(document).ready( function() {
 
-    $("#btn-signin").click(function(){
+    $("#btn-signin").click(function(event){
         
+
+        // Stop form from submitting normally
+        event.preventDefault();        
+
         const email = $("#email").val();
         const password = $("#password").val();
         
@@ -24,11 +28,10 @@ $(document).ready( function() {
         };
 
         if(email.length != "" && password.length != "") {
-            console.log(formData);
             
             $.ajax({
                 type : 'POST',
-                url  : './assets/php/user_login.php',
+                url  : '../php/user_login.php',
                 data : formData,
                 dataType : 'json',
                 encode: true
@@ -36,7 +39,7 @@ $(document).ready( function() {
             .done(function(feedback) {
                 console.log(feedback);
                 if(feedback.status === "success"){    
-                    window.location = './assets/php/user_profile.php';
+                    window.location = '../php/user_profile.php';
                 }
             })
             .fail(function(feedback) {

@@ -25,27 +25,28 @@
             <div>
                 <form class="form" method="POST" action="/" class="row g-3">
                     <div class="col-12">
-                            <label for="Email" class="form-label">Email address</label>
-                            <input type="email" class="form-control email" id="email" name="email" placeholder="Email address" required>
-                            <!-- errors -->
-                            <div class="invalid-feedback emailError" style="font-size:16px;">Please enter Email.</div>
+                        <label for="Email" class="form-label">Email address</label>
+                        <input type="email" class="form-control email" id="email" name="email" placeholder="Email address" required>
+                        <!-- errors -->
+                        <div class="invalid-feedback emailError" style="font-size:16px;">Please enter Email.</div>
                     </div>
                     <div class="col-12">
-                            <label for="Password" clas="form-label">Password</label>
-                            <input type="password" class="form-control password" id="password" name="password" placeholder="Password" required>
-                            <!-- errors -->
-                            <div class="invalid-feedback passwordError" style="font-size:16px;">Please enter Password.</div>
-                            <div class="form-label"><a href="">Forget password ?</a></div>
+                        <label for="Password" clas="form-label">Password</label>
+                        <input type="password" class="form-control password" id="password" name="password" placeholder="Password" required>
+                        <!-- errors -->
+                        <div class="invalid-feedback passwordError" style="font-size:16px;">Please enter Password.</div>
+                        <div class="form-label"><a href="">Forget password ?</a></div>
                     </div>
                     <div class="d-grid col-8 mx-auto"></div>
-                            <button type="submit" class="btn btn-outline-success" id="btn-signin">Sign in</button>
+                        <button type="submit" class="btn btn-outline-success" id="btn-signin">Sign in</button>
                     </div>
                 </form>
             </div>
-            <div class="text-center">
-                New to Portal ? <a href="#"><b>Create an Account.</b></a>
+
+            <div class="col-sm-3 border border-1 text-center p-3 mx-auto">
+                New to Portal ? <a href="../../index.php"><b>Create an Account.</b></a>
             </div>
-            </div>
+
         </div>
 
         <footer>
