@@ -54,8 +54,9 @@ $(document).ready( function() {
                     $(".emailError").html(feedback.message);
                 }
             });
+        
         }
 
     });
-
+    
 });

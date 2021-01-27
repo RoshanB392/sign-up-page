@@ -1,3 +1,8 @@
 # sign-up-page
 
-### Basic Sign Up and Log In Page
+### Basic Sign Up and Log In Web Page
+
+#### 1. Sign Up Page
+#### 2. Sign In Page
+#### 3. User Profile Page
+#### 4. User Profile Edit Page

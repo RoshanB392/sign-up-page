@@ -23,7 +23,6 @@
             <h1 class="text-center border-bottom pb-3">Create your account</h1>
             <div>        
                 <!-- SIGN UP FORM -->
-                <!-- <form id="sign_up_form" method="post" action="./assets/php/sign_up.php" class="row g-3"> -->
                 <form id="sign_up_form" method="POST" class="row g-3">
             
                     <!-- FIRST NAME -->
@@ -62,8 +61,10 @@
                     <div class="d-grid col-8 mx-auto">
                         <button type="submit" class="btn btn-outline-primary btn-block" name="btn-signup" id="btn-signup">Sign Up<span class="fa fa-arrow-right"></span></button>
                     </div>
+                
                 </form>
             </div>
+            
         </div>
 
         <footer>
