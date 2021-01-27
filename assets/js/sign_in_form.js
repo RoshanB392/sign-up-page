@@ -41,9 +41,6 @@ $(document).ready( function() {
                 if(feedback.status === "success"){    
                     window.location = 'user_profile.php';
                 }
-            })
-            .fail(function(feedback) {
-                console.log(feedback);
                 if(feedback.status === "passwordError"){
                     $(".password").addClass("is-invalid");
                     $(".passwordError").html(feedback.message);
@@ -56,9 +53,9 @@ $(document).ready( function() {
                     $(".email").addClass("is-invalid");
                     $(".emailError").html(feedback.message);
                 }
-            })
+            });
         }
 
-    })
+    });
 
-})
+});

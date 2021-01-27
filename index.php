@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <?php include("./assets/html/header.html");?>
+            <?php include("./assets/html/header.php");?>
         </header>
 
         <div class="col-sm-4 shadow-lg p-3 mt-5 mx-auto  bg-white rounded">

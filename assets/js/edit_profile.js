@@ -6,7 +6,7 @@ $(document).ready( function() {
         event.preventDefault();
 
         window.location = "../php/user_edit.php";
-    })
+    });
 
     $('#btn-update-profile').click(function (event){
         
@@ -20,8 +20,9 @@ $(document).ready( function() {
         const profession = $('#profession').val();
         const bio = $('#bio').val();
         const dob = $('#dob').val();
-        const phone = $('#mobileno').val();
-    
+        const phone = $('#phone').val();
+        const uid = $('#uid').val();
+
         // form validation
         if(firstname.length == ""){
             $(".firstname").addClass("is-invalid");
@@ -51,11 +52,11 @@ $(document).ready( function() {
             'profession' : profession,
             'bio' : bio,
             'dob' : dob,
-            'phone' : mobileno
+            'phone' : phone,
+            'uid': uid
         };
-    
-
-    if(formData['firstname'] != '' || formData['lastname'] != '' || formData['email'] != '') {
+        
+    if(formData['.firstname'] !== '' || formData['.lastname'] !== '' || formData['.email'] !== '') {
         
         // process the form
         $.ajax({
@@ -67,10 +68,14 @@ $(document).ready( function() {
         })
         .done(function(feedback){
             if(feedback.status === "success"){    
-                window.location = '../php/user_profile.php';
+                window.location = 'user_profile.php';
             }
+        })
+        .fail(function(feedback){
+            console.log(feedback);
         });
+
     }
 
-})
+});
 });

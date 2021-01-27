@@ -65,11 +65,11 @@ $(document).ready( function() {
                     $(".email").addClass("is-invalid");
                     $(".emailError").html(feedback.message);
                 }
-            })
+            });
         }
 
-    })
+    });
 
-})
+});
 
 

@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <?php include('../html/header.html'); ?>
+            <?php include('../html/header.php'); ?>
         </header>
 
         <div class="col-sm-3 p-3 mt-5 mx-auto shadow-lg bg-white rounded">

@@ -36,7 +36,7 @@ if(!isset($_SESSION['id'])){
         ?>
 
         <header>
-            <?php include("../html/header.html");?>
+            <?php include("../html/header.php");?>
         </header>
 
         <div class="col-lg-6 p-3 mt-5 mx-auto shadow-lg bg-white rounded">

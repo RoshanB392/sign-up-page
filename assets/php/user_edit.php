@@ -35,7 +35,7 @@ if(!isset($_SESSION['id'])){
 
     ?>
         <header>
-            <?php include("../html/header.html");?>
+            <?php include("../html/header.php");?>
         </header>
 
         <div class="col-lg-6 p-3 mt-5 mx-auto shadow-lg bg-white rounded">
@@ -85,21 +85,24 @@ if(!isset($_SESSION['id'])){
                     <!-- BIO DATA-->
                     <div id="bio-group" class="col-12">
                         <label for="bio" class="form-label">Your Bio</label>
-                        <textarea class="form-control" id="bio" name="bio" placeholder="Your detail description"><?php echo($row['bio']);?></textarea>
+                        <input type="text" class="form-control" id="bio" name="bio" value="<?php echo($row['bio']);?>" placeholder="Your detail description"></textarea>
                     </div>
                     
                     <!-- DATE OF BIRTH -->
                     <div id="dob-group" class="col-12">
                         <label for="dob" class="form-label">Date Of Birth</label>
-                        <input type="date" min="1900-01-01" max="2021-12-31" pattern="\d{4}-\d{2}-\d{2}" id="dob" class="form-control" name="dob" value="<?php echo($row['dob']);?>" placeholder="YYYY/MM/DD">
+                        <input type="date" min="1921-01-01" max="2021-12-31" id="dob" class="form-control" name="dob" value="<?php echo($row['dob']);?>" placeholder="YYYY/MM/DD">
                     </div>
 
                     <!-- MOBILE NUMBER -->
                     <div id="mobileno-group" class="col-12">
                         <label for="mobileno" class="form-label">Mobile Number</label>
-                        <input type="tel" class="form-control" minlength="10" maxlength="10" pattern="[6-9]{1}[0-9]{9}" id="mobileno" name="mobileno" value="<?php echo($row['phone']);?>" placeholder="XXXXXXXXXX">
+                        <input type="tel" class="form-control" minlength="10" maxlength="10" pattern="[6-9]{1}[0-9]{9}" id="phone" name="phone" value="<?php echo($row['phone']);?>" placeholder="XXXXXXXXXX">
                     </div>
-
+                    
+                    <!-- ID -->
+                    <input type="text" name="uid" id="uid" value="<?php echo($row['id']);?>" hidden />
+                    
                     <!-- SUBMIT BUTTON -->
                     <div class="d-grid col-6 mx-auto">
                         <button type="submit" class="btn btn-outline-info btn-block" id="btn-update-profile">Update Profile<span class="fa fa-arrow-right"></span></button>
