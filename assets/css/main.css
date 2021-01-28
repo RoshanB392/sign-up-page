@@ -2,22 +2,28 @@ body {
   font-family: "Source Code Pro", monospace;
   background-color: #f0f0f0;
   color: #000;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .container {
-  background-color: lightgrey;
-  width: 100%;
-  min-height: 60px;
+  display: block;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  min-height: 56px;
+  padding: 20px;
   left: 0;
   bottom: 0;
-  position: absolute;
-  padding: 30 15px;
 }
 
 .nav-btn {
   border: 1px solid white;
   margin-left: 8px;
   border-radius: 5px;
+  width: 82px;
+  margin: 3px;
 }
 
 /*# sourceMappingURL=main.css.map */
