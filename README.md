@@ -1,6 +1,6 @@
 # sign-up-page
 
-### Basic Sign Up and Log In Web Page
+### Basic Sign Up and Log In Web Page using AJAX
 
 #### 1. Sign Up Page
 #### 2. Sign In Page
